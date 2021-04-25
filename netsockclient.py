@@ -1,22 +1,21 @@
+#import socket and sys
 import socket
+import sys
 
+#input server information
 host = input ("Type the server IP address: ")
 port = int(input("Type the server port #: "))
 
-client_s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_s.connect((host, port))
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((host, port))
+
+#Notify of connection with server
 print("Connection established with server")
 
-mess = input("Type message to send to server: ")
-client_s.sendall(mess.encode())
+#ALlow data to be continually sent until the program is exited
+while True:
+    mess = input("Type message to send to server: ")
+    s.sendall(mess.encode())
 
-# Look for the response
-amount_received = 0
-amount_expected = len(mess)
-
-while amount_received < amount_expected:
-    data = client_s.recv(16)
-    amount_received += len(data)
-    print(data)
-
-client_s.close()
+s.close()
