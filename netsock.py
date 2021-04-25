@@ -5,7 +5,7 @@ import socket
 
 #Setting host and port variables for server based on user input
 host = input ("Type the server IP address: ")
-port = input("Type the server port #: ")
+port = int(input("Type the server port #: "))
 
 #Create socket based on inet4 family address and TCP connection
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
