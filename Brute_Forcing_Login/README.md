@@ -7,4 +7,6 @@ The point of the script I created was to pull this information from the page, se
 
 Running the brute_force.py program resulted in the following: ![Script Results](https://github.com/clayjoseph1994/Tools/blob/main/Brute_Forcing_Login/images/Got_creds.png)
 
-Once I found out the username and password that resulted in a 200 response, I used those credentials for the login, and was rewarded with the following: ![Successful Login](https://github.com/clayjoseph1994/Tools/blob/main/Brute_Forcing_Login/images/successful_login.png)
+Once I found the username and password resulting in a 200 response, I used those credentials for the login, resulting in: ![Successful Login](https://github.com/clayjoseph1994/Tools/blob/main/Brute_Forcing_Login/images/successful_login.png)
+
+This was a super simple program, but creating it taught me useful skills such as how to use the requests module and beautiful soup, as well as how to rewrite a program based in python2 to python3
