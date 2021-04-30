@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs4 #importing beautifulsoup to parse output an
 
 """function to retrive content of page"""
 def downPage(url): #definining function with a parameter of url
-    r = requests.get(url) #using requests module to get url
+    r = requests.get(url) #using requests module on url
     response = r.content #storing the content from requests.get(url) as response
     return response #returns the response from the page
 
